@@ -1,3 +1,4 @@
+
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.db.models import Max
@@ -47,10 +48,6 @@ def getTinfo(request):
         return render(request,'features/trinfo.html',{'data':a})
 
     return HttpResponse('<h1>DAta invalid<h1>')
-
-
-
-
 
 
 
@@ -359,8 +356,3 @@ def pnr(request):
 
 
     return render(request,'features/pnr.html')
-
-
-
-
-

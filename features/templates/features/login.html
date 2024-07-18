@@ -3,56 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Railway System</title>
-     {% load static %}
+    {% load static %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <style>
-        body{
-           
-            background-image:url('{% static "images/rail.jpg" %}');
-            background-repeat:no-repeat;
-            background-size:100% 100%;
-            height: 650px;
-
-
+        html, body {
+            height: 100%;
+            margin: 0;
         }
-        .log
-        {
-            margin-left: 42%;
-            height:280px;
-            width:300px;
-            border-radius:10px;
+        body {
+            background-image: url('{% static "images/rail.png" %}');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .log {
+            margin: 0 auto;
+            height: 400px;
+            width: 450px;
+            border-radius: 10px;
             background-color: blue;
-            opacity: 70%;
-
+            opacity: 0.8;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
-        .sty
-        {
-            font-size:15px;
-            color:white;
-            margin-left: 20px;
+        .sty {
+            font-size: 30px;
+            color: white;
+            margin-left: 50px;
         }
-
-
     </style>
 </head>
-<body >
-   
+<body>
     <div class="log">
-         <h2 style="text-align:center; color: white;">Login</h2>
+        <h2 style="text-align: center; color: white;">Login</h2>
         <br/>
-        
         <form action="" method="POST">
             {% csrf_token %}
             <span class="sty"> Username: </span><input type="text" name="username" required=""><br><br>
-            <span class="sty"> Password: </span><input type="password" name="password" required=""><br/></br></br>
-
+            <span class="sty"> Password: </span><input type="password" name="password" required=""><br/><br/><br/>
             <center><input type="submit" class="btn btn-success" value="Login"></center><br/>
-
         </form>
-        <center><a href="/register/"><button class="btn btn-success" >Register</button></a></center>
+        <center><a href="/register/"><button class="btn btn-success">Register</button></a></center>
     </div>
 </body>
 </html>

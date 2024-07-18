@@ -1,14 +1,16 @@
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path
 import features
 from . import views
 app_name='home'
+
+
 urlpatterns = [
     path('',views.home,name="hom" ),
     path('logout/',views.logout,name="logout"),
     path('search/',features.views.search),
-    path('search/trains',features.views.getTrains),
-    path('schedule/',features.views.schedule),
+    path('search/trains',features.views.getTrains,name="getTrains"),
+    path('schedule/',features.views.schedule,name='schedule'),
     path('schedule/trains',features.views.getTinfo),
     path('addR/',features.views.addR,name="addR"),
     path('addST/',features.views.addST),

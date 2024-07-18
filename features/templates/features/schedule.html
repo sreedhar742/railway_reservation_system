@@ -15,7 +15,7 @@
         body{
             background-image:url('{% static "images/schedule.jpg"%}');
             background-size:100%;
-            background-opacity:0.4;
+            background-opacity:1.0;
             background-repeat:no-repeat;
 
 
@@ -49,7 +49,7 @@
         <span class="sty" style="font-size:30px;color:Yellow;">Select Train Number/Name:</span><br/><br/>
         <select name="tnum">
         {% for i in a %}
-            <option value="{{i.tno}}">{{i.tno}}/{{i.tname}}</option>
+            <option value="{{i.tno}}">{{i.tno}}::{{i.tname}}</option>
         {%endfor%}
         </select>
         
