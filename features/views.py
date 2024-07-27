@@ -21,7 +21,7 @@ def getTrains(request):
             des = data['des']
 
             # Retrieve all records from RouteStation model
-            all_trains = RouteStation.objects.all()
+            all_trains = RouteStation.objects.get(Sid=des)
 
             # You may need to apply additional filters or ordering based on your requirements
             print(all_trains)
